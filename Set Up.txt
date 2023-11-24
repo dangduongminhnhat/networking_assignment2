@@ -69,15 +69,3 @@ int fa0/3
 switchport mode trunk
 end
 sh vlan brief
-
-Setup Sw8:
-vtp mode client
-vtp domain BANK
-int range fa0/1-2
-switchport mode access 
-switchport access vlan 70
-ex
-int fa0/3
-switchport mode trunk
-end
-sh vlan brief
