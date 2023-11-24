@@ -1,0 +1,83 @@
+Setup Sw2:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 10
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
+
+Setup Sw3:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 20
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
+
+Setup Sw4:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 30
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
+
+Setup Sw5:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 40
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
+
+Setup Sw6:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 50
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
+
+Setup Sw7:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 60
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
+
+Setup Sw8:
+vtp mode client
+vtp domain BANK
+int range fa0/1-2
+switchport mode access 
+switchport access vlan 70
+ex
+int fa0/3
+switchport mode trunk
+end
+sh vlan brief
