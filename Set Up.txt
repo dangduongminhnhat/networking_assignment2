@@ -28,8 +28,7 @@ encapsulation dot1Q 10
 ip address 192.168.1.1 255.255.255.0
 ex
 
-Setup router vlan 10:
-interface gigabitEthernet 0/0.8
-encapsulation dot1Q 80
-ip address 192.168.8.1 255.255.255.0
+interface gigabitEthernet 0/0.3
+encapsulation dot1Q 30
+ip address 192.200.3.1 255.255.255.0
 ex
