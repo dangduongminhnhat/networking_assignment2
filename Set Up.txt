@@ -10,62 +10,26 @@ switchport mode trunk
 end
 sh vlan brief
 
-Setup Sw3:
-vtp mode client
-vtp domain BANK
-int range fa0/1-2
-switchport mode access 
-switchport access vlan 20
+Setup dhcp vlan 10:
+ip dhcp pool vlan_10
+network 192.168.1.0 255.255.255.0
+default-router 192.168.1.1
+dns-server 192.168.7.5
 ex
-int fa0/3
-switchport mode trunk
-end
-sh vlan brief
 
-Setup Sw4:
-vtp mode client
-vtp domain BANK
-int range fa0/1-2
-switchport mode access 
-switchport access vlan 30
+Setup interface vlan 10:
+int vlan 10
+ip address 192.168.1.5 255.255.255.0
 ex
-int fa0/3
-switchport mode trunk
-end
-sh vlan brief
 
-Setup Sw5:
-vtp mode client
-vtp domain BANK
-int range fa0/1-2
-switchport mode access 
-switchport access vlan 40
+Setup router vlan 10:
+interface gigabitEthernet 0/0.1
+encapsulation dot1Q 10
+ip address 192.168.1.1 255.255.255.0
 ex
-int fa0/3
-switchport mode trunk
-end
-sh vlan brief
 
-Setup Sw6:
-vtp mode client
-vtp domain BANK
-int range fa0/1-2
-switchport mode access 
-switchport access vlan 50
+Setup router vlan 10:
+interface gigabitEthernet 0/0.8
+encapsulation dot1Q 80
+ip address 192.168.8.1 255.255.255.0
 ex
-int fa0/3
-switchport mode trunk
-end
-sh vlan brief
-
-Setup Sw7:
-vtp mode client
-vtp domain BANK
-int range fa0/1-2
-switchport mode access 
-switchport access vlan 60
-ex
-int fa0/3
-switchport mode trunk
-end
-sh vlan brief
